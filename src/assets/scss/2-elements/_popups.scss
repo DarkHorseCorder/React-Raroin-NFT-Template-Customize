@@ -1,0 +1,101 @@
+.popup {
+    .modal-content {
+        border: solid 1px $color_stroke;
+        border-radius: $border_radius !important;
+        box-shadow: $shadow_1;
+    }
+    .close {
+        position: absolute;
+        right: -15px;
+        top: -15px;
+        box-shadow: $shadow_1;
+        outline: none;
+        border: solid 1px $color_stroke;
+        background-color: $color_white;
+        transition: all 0.25s $transition_function;
+        z-index: 2;
+        &:hover {
+            background-color: $color_black;
+            border: solid 1px $color_black;
+        }
+    }
+}
+#popup_preview {
+    .modal-content {
+        max-width: 20rem;
+    }
+}
+
+
+
+.custom-content {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    right: 15px !important;
+    margin: .5rem !important;
+    transform: translate(-50%, -50%);
+    width: max-content !important;
+    border: solid 1px #e2eef1;
+    border-radius: 20px !important;
+    box-shadow: 0px 17px 13px 0px #192c4b05 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    width: auto !important;
+    pointer-events: auto !important;
+    background-color: #fff !important;
+    background-clip: padding-box !important;
+    outline: 0 !important;
+    padding: 40px !important;
+    max-width: 500px;
+    
+}
+
+  .popup-arrow {
+    color: rgb(255, 255, 255);
+    display: none !important;
+  }
+  [role='tooltip'].popup-content {
+    width: 90% !important;
+    margin-left: 0px !important;
+margin-right: 0 !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+  }
+  
+  .popup-overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  [data-popup='tooltip'].popup-overlay {
+    background: rgba(0, 0, 0, 0.5) !important;
+    pointer-events: unset !important;
+  }
+  .popup_btn {
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      box-shadow: none;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .social-content {
+    max-width: max-content !important;
+    padding: 20px !important;
+    position: absolute !important;
+    transform: none !important;
+    border: solid 1px #e2eef1;
+    border-radius: 20px !important;
+    background-color: #fff !important;
+    span {
+      color: $color_black;
+    }
+    i {
+      font-size: 20px;
+      color: $color_black;
+  }
+  &.more-content {
+    padding: 10px 20px !important;
+    i {
+      font-size: 20px;
+      color: $color_red;
+  }
+  }
+  }
