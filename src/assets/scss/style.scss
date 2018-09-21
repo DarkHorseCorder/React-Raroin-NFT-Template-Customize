@@ -1,0 +1,121 @@
+/* ===============================================
+    TABLE  OF CONTENT:
+    ------------------
+- 1/ CSS Basic classes
+- 2/ base
+- 3/ elements
+- 4/ Layouts
+- 5/ Pages
+=============================================== */
+
+// style.scss
+
+/* ===================
+- 1/ CSS Basic classes
+=======================*/
+
+@import "1-helpers/colors";
+@import "1-helpers/mixins";
+@import "1-helpers/variables";
+@import "1-helpers/global";
+@import "1-helpers/classes";
+@import "1-helpers/spacing";
+@import "1-helpers/margin";
+@import "1-helpers/padding";
+
+/* ===================
+2/ base
+=======================*/
+
+@import "0-base/base";
+@import "0-base/typography";
+
+/* ===================
+3/ elements
+=======================*/
+
+@import "2-elements/buttons";
+@import "2-elements/forms";
+@import "2-elements/tabs";
+@import "2-elements/dropdowns";
+@import "2-elements/menus";
+@import "2-elements/breadcrumb";
+@import "2-elements/accordion";
+@import "2-elements/avatars";
+@import "2-elements/popups";
+@import "2-elements/card_items";
+@import "2-elements/creators_items";
+@import "2-elements/collections_items";
+@import "2-elements/menus";
+
+/* ===================
+4/ Layouts
+=======================*/
+
+@import "3-Layouts/header";
+@import "3-Layouts/hero";
+@import "3-Layouts/footer";
+@import "3-Layouts/sections";
+
+/* ===================
+- 5/ Pages
+=======================*/
+
+@import "4-Pages/elements_page";
+@import "4-Pages/profile_page";
+@import "4-Pages/register";
+@import "4-Pages/forum_page";
+@import "4-Pages/questions_page";
+@import "4-Pages/contact";
+@import "4-Pages/404";
+@import "4-Pages/requests_page";
+@import "4-Pages/submit_requests";
+@import "4-Pages/upcoming_projects";
+@import "4-Pages/blog";
+@import "4-Pages/_ranking_page";
+@import "4-Pages/index";
+.community {
+    margin-top: 100px;
+    @include tablet_vert_screen {
+        margin-top: 50px;
+    }
+    .section__title {
+        max-width: 60rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .section__text {
+        max-width: 40rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .community__items {
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            @include card_item;
+            @include tablet_vert_screen {
+                margin-bottom: 20px;
+            }
+            padding: 30px;
+            .logo {
+                height: 5rem;
+                width: 5rem;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #edf3f5;
+                &.is_twitter {
+                    background: rgba(5, 171, 246, 0.1);
+                }
+                &.is_discord {
+                    background: rgba(114, 137, 217, 0.1);
+                }
+            }
+        }
+    }
+}
